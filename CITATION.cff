@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this skill, cite this repository and retain upstream attribution."
+title: "Teardown for Codex: interactive V8 and Sentinel studies"
+version: 1.1.0
+date-released: 2026-11-02
+authors:
+  - name: "TUANZIDING"
+repository-code: "https://github.com/TUANZIDING/teardown-codex"
+license: MIT

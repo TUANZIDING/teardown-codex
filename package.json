@@ -1,0 +1,16 @@
+{
+  "name": "teardown-codex",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Reusable Codex skill and offline V8 / Sentinel scene generator",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "npm ci --prefix upstream --no-audit --no-fund",
+    "generate": "node scripts/generate-v1.1.mjs",
+    "test": "node templates/sentinel-live/motion.test.mjs && node scripts/test-generator-v1.1.mjs"
+  },
+  "type": "module"
+}

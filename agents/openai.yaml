@@ -1,0 +1,4 @@
+interface:
+  display_name: "三维拆解 · V8 与哨兵"
+  short_description: "生成可离线运行的八缸发动机和哨兵机器人，并编辑三维结构、运动和交互"
+  default_prompt: "使用 $teardown-codex 生成 V8 和哨兵的离线交互演示，并保存可编辑源码。"

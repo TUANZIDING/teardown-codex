@@ -3,9 +3,22 @@ name: teardown-codex
 description: 在 Codex 中制作可交互的 3D 机械拆解、剖视、爆炸图和结构原理教学页面，支持离线 HTML、同步仪表与按需视频导出。适用于展示装置如何运行或结构如何配合；医学结构可做明确标注的教学示意。
 ---
 
-# Codex 3D 拆解 v1.0
+# Codex 3D 拆解 v1.1
 
 将用户指定对象制作成可旋转、拆解、观察内部并调节参数的三维讲解。默认中文离线 HTML，用户指定的风格、技术栈和输出优先。技能目录是本文件所在目录，记为 SKILLDIR；运行工具在 `upstream/`，工作成果放用户项目，不在技能内部开发新作品。
+
+## V8 / 哨兵成品快速入口
+
+当用户要求生成这两套成品时，优先用随附生成器，不要重新发明模型。要求 Node.js 20+；依赖缺失时在 SKILLDIR 执行 npm run setup，遵守用户环境安装限制。无需 Python、ffmpeg、Claude CLI 或 API key。
+
+```sh
+node "$SKILLDIR/scripts/generate-v1.1.mjs" all --out /用户项目/新目录
+# all 可替换为 v8 或 sentinel
+```
+
+输出包含 v8.html / sentinel.html、source/ 和许可证。生成器拒绝已有目录，不能删除用户目录来绕过；改用新目录。用户要求编辑时改导出的 source，而非技能中的模板。只生成单个作品时仅运行对应构建目标。
+
+修改模型前按需读 [模型与修改指南](文档/模型与修改指南v1.1.md)。V8 沿用英文教学界面；哨兵是中文概念运动学演示。未经用户要求不额外翻译、不发布。V8 的 25 秒闲置恢复属于上游行为；哨兵手动接管后需显式恢复巡演。不要声称两个模板的暂停行为相同。
 
 ## 开始与运行
 
@@ -34,4 +47,4 @@ description: 在 Codex 中制作可交互的 3D 机械拆解、剖视、爆炸�
 
 ## 来源
 
-参考 elvarofficial/teardown（MIT）；完整上游许可证在 upstream/LICENSE，源码中的更早来源及音效归属保留。版本出处见 来源记录v1.0.md。
+参考 elvarofficial/teardown（MIT）；完整上游许可证在 upstream/LICENSE，源码中的更早来源及音效归属保留。版本出处见 来源记录v1.1.md。
